@@ -1,0 +1,18 @@
+/**************************************************/
+/*        Programacion para mecatronicos          */
+/* Nombre:     Enders Jose Fuma Santana           */
+/* Matricula:  2026-0304                          */
+/* Seccion:    Sabados                            */
+/* Practica:   Primer Parcial C3 2026 Sabado      */
+/* Fecha:      06/10/2026                         */
+/**************************************************/
+# Ejecutables y archivos temporales de compilacion
+build/
+*.exe
+*.o
+*.obj
+a.out
+# Archivos del sistema y configuracion privada
+.DS_Store
+Thumbs.db
+.env
