@@ -1,0 +1,16 @@
+name: Pruebas
+on: [push]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compilar
+        run: gcc -std=c11 -Wall -Wextra 20260304.c -o reto
+      - name: Ejecutar los 17 casos
+        run: |
+          for f in pruebas/caso_*.in; do
+            n=$(basename "$f" .in)
+            ./reto < "$f" | diff - "pruebas/$n.out" || exit 1
+            echo "$n OK"
+          done
